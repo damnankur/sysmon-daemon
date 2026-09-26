@@ -1,0 +1,21 @@
+# Rust build artifacts
+/target
+
+# Swift / Xcode
+.swiftpm/
+.build/
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+
+# OS noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Logs
+*.log

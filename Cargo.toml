@@ -1,0 +1,27 @@
+[package]
+name = "sysmon-daemon"
+version = "0.1.0"
+edition = "2021"
+authors = ["Aks (Ankur Kumar Singh) <aks@example.com>"]
+description = "Cross-platform systems monitoring daemon: Rust backend (Linux-tested) + Swift macOS XPC protocol"
+repository = "https://github.com/damnankur/sysmon-daemon"
+homepage = "https://github.com/damnankur/sysmon-daemon"
+documentation = "https://github.com/damnankur/sysmon-daemon#readme"
+readme = "README.md"
+license = "MIT"
+keywords = ["daemon", "monitoring", "xpc", "systems", "thermal", "ipc"]
+categories = ["os", "command-line-utilities"]
+
+[dependencies]
+
+[lib]
+name = "sysmon_core"
+path = "src/lib.rs"
+
+[[bin]]
+name = "sysmon-daemon"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
